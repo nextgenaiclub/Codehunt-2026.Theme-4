@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Target, Clock, Check, X, AlertCircle, RotateCcw } from 'lucide-react'
+import { Target, Clock, Check, X, AlertCircle, ArrowRight, RotateCcw } from 'lucide-react'
 import { API_URL } from '../App'
 
 export default function Phase2({ team, setTeam }) {
