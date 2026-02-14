@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Brain, Check, X, AlertCircle, Sparkles } from 'lucide-react'
+import { Brain, Check, X, AlertCircle, Sparkles, RotateCcw } from 'lucide-react'
 import { API_URL } from '../App'
 
 export default function Phase5({ team, setTeam }) {
@@ -11,6 +11,8 @@ export default function Phase5({ team, setTeam }) {
     const [submitting, setSubmitting] = useState(false)
     const [result, setResult] = useState(null)
     const [completed, setCompleted] = useState(false)
+    const [failed, setFailed] = useState(false)
+    const [failMessage, setFailMessage] = useState('')
     const [score, setScore] = useState(0)
 
     // Fetch riddles - MUST be before any conditional returns
@@ -66,6 +68,35 @@ export default function Phase5({ team, setTeam }) {
                 </div>
                 <br />
                 <p style={{ color: '#FFD700', fontSize: '1.1rem' }}>Scan the next QR code to continue.</p>
+            </div>
+        )
+    }
+
+    if (failed) {
+        return (
+            <div className="container" style={{ textAlign: 'center', padding: '60px 0' }}>
+                <X size={60} style={{ color: '#ef4444', marginBottom: '20px' }} />
+                <h2 style={{ color: '#ef4444', marginBottom: '20px' }}>Phase 5 Not Passed</h2>
+                <p style={{ fontSize: '1.2rem', marginBottom: '10px' }}>
+                    You scored {score}/5.
+                </p>
+                <p style={{ fontSize: '1.1rem', marginBottom: '30px', color: '#b3b3b3' }}>
+                    {failMessage}
+                </p>
+                <button
+                    onClick={() => {
+                        setFailed(false)
+                        setAnswers({})
+                        setCurrentRiddle(0)
+                        setScore(0)
+                        setTextAnswer('')
+                        setResult(null)
+                    }}
+                    className="btn btn-primary btn-large"
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem', padding: '15px 40px' }}
+                >
+                    <RotateCcw size={20} /> Try Again
+                </button>
             </div>
         )
     }
@@ -146,73 +177,28 @@ export default function Phase5({ team, setTeam }) {
     }
 
     const submitPhaseCompletion = async () => {
-        // Calculate final score including the last answer
-        // Note: score state might not be updated yet due to closure, 
-        // but we can rely on the backend validation or re-calculate
-        // For simplicity, we'll try to submit and let backend validate
-
-        // Wait a bit for state to settle or recalculate eagerly
-        let finalScore = 0
-        // We need to count the correct answers from the 'answers' state plus looking at the last one
-        // Since 'answers' updates async, this part is tricky. 
-        // Better strategy: We will pass the data we have.
-        // Actually, the simplest way is to fetch the current score or just pass simple data.
-
-        // Let's rely on the "answers" map we built up.
-        // We need to do a final check. 
-
-        // A safer way: Calculate locally
-        // But we already sent individual answers.
-        // Let's assume we tracked score in state correctly for display, 
-        // but for submission we should count from our local tracking variables if possible.
-        // The safest is to count strictly from the answers object, but the last one might be missing if we call this too fast.
-
-        // Re-calculate score from answers state would be async.
-        // Let's just pass what we have, knowing logical race condition could exist in this simple impl.
-        // To fix: we'll call completion with strict calculated values.
-
-        const validScore = Object.values(answers).filter(a => a.correct).length
-            + (answers[riddles[currentRiddle]?.id]?.correct ? 0 : 0) // It's already in there?
-        // Actually, since we updated state and waited 1s, it should be there.
-
-        // However, the LAST answer update happens right before this call. 'answers' state might be fresh.
-        // Let's try to just recalculate based on the latest state available in the timeout callback.
-        // But we can't access updated state in closure easily without ref or dependency.
-
-        // Alternative: Just count locally
-        // For now, let's trust the flow.
-
         try {
-            // We need to calculate score based on all answers including the last one
-            // We can't easily access the very last result inside this function scope if it relies on stale state 
-            // from the render cycle. 
-            // But we can re-verify:
-
-            let currentScore = 0;
-            // Iterate all riddles
-            riddles.forEach(r => {
-                if (answers[r.id]?.correct) currentScore++;
-            });
-
             const res = await fetch(`${API_URL}/phase5/complete`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     teamId: team.teamId,
-                    answers,
-                    score: currentScore
+                    answers
                 })
             })
 
             const data = await res.json()
             if (data.success) {
+                setScore(data.score)
                 setCompleted(true)
                 // Refresh team data
                 const teamRes = await fetch(`${API_URL}/teams/${team.teamName}`)
                 const teamData = await teamRes.json()
                 setTeam(teamData)
             } else {
-                alert(data.error || 'Phase completion failed')
+                setScore(data.score || 0)
+                setFailMessage(data.message || 'Minimum 3/5 required to pass. Try again!')
+                setFailed(true)
             }
         } catch (err) {
             console.error('Completion failed', err)

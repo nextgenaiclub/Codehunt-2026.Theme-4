@@ -876,11 +876,35 @@ app.post('/api/phase5/complete', async (req, res) => {
             return res.status(400).json({ error: 'Not on Phase 5' });
         }
 
+        // Recalculate score server-side for accuracy
+        let serverScore = 0;
+        if (answers && typeof answers === 'object') {
+            Object.entries(answers).forEach(([riddleId, ans]) => {
+                const riddle = phase5Riddles.find(r => r.id === parseInt(riddleId));
+                if (riddle) {
+                    if (riddle.type === 'mcq' && ans.answer === riddle.answer) {
+                        serverScore++;
+                    } else if (riddle.type === 'text' && typeof ans.answer === 'string' &&
+                        ans.answer.trim().toLowerCase() === riddle.answer.toString().trim().toLowerCase()) {
+                        serverScore++;
+                    }
+                }
+            });
+        }
 
+        const MIN_SCORE = 3;
+        if (serverScore < MIN_SCORE) {
+            console.log(`🧩 Phase 5 - Team: ${team.teamName} failed with ${serverScore}/5 (min ${MIN_SCORE} required)`);
+            return res.json({
+                success: false,
+                score: serverScore,
+                message: `You scored ${serverScore}/5. Minimum ${MIN_SCORE}/5 required to pass. Try again!`
+            });
+        }
 
         await saveTeam(teamId, {
             phase5: {
-                score: score,
+                score: serverScore,
                 answers: answers,
                 timestamp: new Date().toISOString(),
                 completed: true
@@ -888,10 +912,11 @@ app.post('/api/phase5/complete', async (req, res) => {
             currentPhase: 6
         });
 
-        console.log(`🧩 Phase 5 - Team: ${team.teamName} completed with ${score}/5!`);
+        console.log(`🧩 Phase 5 - Team: ${team.teamName} completed with ${serverScore}/5!`);
 
         res.json({
             success: true,
+            score: serverScore,
             message: 'Phase 5 completed! Proceed to the final phase.'
         });
     } catch (error) {
