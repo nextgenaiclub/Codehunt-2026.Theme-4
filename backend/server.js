@@ -717,7 +717,18 @@ app.post('/api/phase3/submit', async (req, res) => {
             };
         });
 
-        // No minimum score required - completing the phase is enough
+        const MIN_SCORE = 3;
+        if (score < MIN_SCORE) {
+            console.log(`💻 Phase 3 - Team: ${team.teamName}, Score: ${score}/5, Failed (min ${MIN_SCORE} required)`);
+            return res.json({
+                success: true,
+                score,
+                passed: false,
+                results,
+                questions: phase3Questions
+            });
+        }
+
         const updateData = {
             phase3: {
                 score: score,

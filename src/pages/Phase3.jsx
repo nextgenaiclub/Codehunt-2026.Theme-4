@@ -239,12 +239,13 @@ export default function Phase3({ team, setTeam }) {
                                 onClick={() => {
                                     setResults(null)
                                     setSubmitted(false)
-                                    setTimeLeft(prev => Math.max(prev, 300))
+                                    setAnswers({})
+                                    setTimeLeft(480)
                                 }}
                                 className="btn btn-secondary"
                             >
                                 <RotateCcw size={18} style={{ marginRight: '8px' }} />
-                                Try Again & Edit Answers
+                                Try Again
                             </button>
                         </div>
                     )}
