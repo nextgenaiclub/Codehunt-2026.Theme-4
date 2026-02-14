@@ -70,19 +70,24 @@ export default function Phase2({ team, setTeam }) {
                 // If last question, mark completed
                 if (currentQ === questions.length - 1) {
                     // Submit completion to server
-                    const completeRes = await fetch(`${API_URL}/phase2/complete`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ teamId: team?.teamId })
-                    })
-                    const completeData = await completeRes.json()
-                    if (completeData.success) {
-                        setCompleted(true)
-                        clearInterval(timerRef.current)
-                        // Refresh team data
+                    try {
+                        await fetch(`${API_URL}/phase2/complete`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ teamId: team?.teamId })
+                        })
+                    } catch (e) {
+                        console.error('Complete call failed:', e)
+                    }
+                    // Always refresh team data and mark completed
+                    setCompleted(true)
+                    clearInterval(timerRef.current)
+                    try {
                         const teamRes = await fetch(`${API_URL}/teams/${team.teamName}`)
                         const teamData = await teamRes.json()
-                        setTeam(teamData)
+                        if (teamRes.ok) setTeam(teamData)
+                    } catch (e) {
+                        console.error('Team refresh failed:', e)
                     }
                 }
             } else {
