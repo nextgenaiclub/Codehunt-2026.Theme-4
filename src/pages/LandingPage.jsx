@@ -60,7 +60,7 @@ export default function LandingPage({ team, setTeam }) {
 
                 {/* Phase Preview Cards */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginBottom: '50px' }}>
-                    <PhaseCard icon={<Sparkles />} num={1} title="AI Video Generation" desc="Create futuristic VU 2050 videos" />
+                    <PhaseCard icon={<Sparkles />} num={1} title="AI Image Generation" desc="Create futuristic VU 2050 images" />
                     <PhaseCard icon={<Trophy />} num={2} title="AI Quiz Challenge" desc="Test your AI fundamentals" />
                     <PhaseCard icon={<Rocket />} num={3} title="Code Output Prediction" desc="Predict what the code outputs" />
                     <PhaseCard icon={<Users />} num={4} title="Debug the Room" desc="Fix bugs to find the room" />

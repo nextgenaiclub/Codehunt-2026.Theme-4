@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Sparkles, Check, AlertCircle, Video } from 'lucide-react'
+import { Sparkles, Check, AlertCircle, ImageIcon } from 'lucide-react'
 import { API_URL } from '../App'
 
 export default function Phase1({ team, setTeam }) {
@@ -139,9 +139,9 @@ export default function Phase1({ team, setTeam }) {
             <div style={{ maxWidth: '700px', margin: '0 auto' }}>
                 <div style={{ textAlign: 'center', marginBottom: '40px' }}>
                     <Sparkles size={50} style={{ color: '#FFD700', marginBottom: '15px' }} />
-                    <h1>Phase 1: AI Video Generation</h1>
+                    <h1>Phase 1: AI Image Generation</h1>
                     <p style={{ fontSize: '1.1rem', marginTop: '15px' }}>
-                        Create an AI-generated video showcasing
+                        Create an AI-generated image showcasing
                     </p>
                     <h2 style={{ color: '#fff', marginTop: '10px' }}>"Vishwakarma University in 2050"</h2>
                     <p style={{ fontSize: '1rem', marginTop: '10px', color: '#a78bfa' }}>
@@ -152,14 +152,14 @@ export default function Phase1({ team, setTeam }) {
                 {/* Instructions */}
                 <div className="card" style={{ marginBottom: '30px' }}>
                     <h3 style={{ marginBottom: '15px' }}>
-                        <Video size={20} style={{ marginRight: '10px' }} />
+                        <ImageIcon size={20} style={{ marginRight: '10px' }} />
                         Instructions
                     </h3>
                     <ul style={{ paddingLeft: '20px', lineHeight: 2 }}>
-                        <li>Use any AI tool: RunwayML, Pika, Sora, Kling AI, Luma, etc.</li>
+                        <li>Use any AI tool: DALL-E, Midjourney, Stable Diffusion, Leonardo AI, etc.</li>
                         <li>Theme: Imagine VU campus in the year 2050 - futuristic, innovative, tech-forward</li>
                         <li>
-                            Upload your "VU IN 2050" video to the shared Google Drive folder:{' '}
+                            Upload your "VU IN 2050" image to the shared Google Drive folder:{' '}
                             <a href="https://drive.google.com/drive/u/4/folders/1pPC6zKBVIxQbmEVOz1as6KyU7NR021Rg" target="_blank" rel="noopener noreferrer" style={{ color: '#60a5fa', textDecoration: 'underline' }}>
                                 Upload Here
                             </a>
@@ -232,7 +232,7 @@ export default function Phase1({ team, setTeam }) {
                     </div>
 
                     <div className="form-group">
-                        <label className="form-label">Upload Your Generated Video Here *</label>
+                        <label className="form-label">Upload Your Generated Image Here *</label>
                         <a
                             href="https://drive.google.com/drive/u/4/folders/1pPC6zKBVIxQbmEVOz1as6KyU7NR021Rg"
                             target="_blank"
@@ -250,7 +250,7 @@ export default function Phase1({ team, setTeam }) {
                                 fontSize: '1rem'
                             }}
                         >
-                            📁 Click Here to Upload Video to Google Drive
+                            📁 Click Here to Upload Image to Google Drive
                         </a>
                     </div>
 
@@ -259,7 +259,7 @@ export default function Phase1({ team, setTeam }) {
                         <textarea
                             name="aiPrompt"
                             className="form-textarea"
-                            placeholder="Enter the exact prompt you used to generate your video..."
+                            placeholder="Enter the exact prompt you used to generate your image..."
                             value={formData.aiPrompt}
                             onChange={handleChange}
                         />
