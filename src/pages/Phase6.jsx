@@ -8,6 +8,7 @@ export default function Phase6({ team, setTeam }) {
     const [photo, setPhoto] = useState(null)
     const [photoPreview, setPhotoPreview] = useState(null)
     const [location, setLocation] = useState('')
+    const [driveLink, setDriveLink] = useState('')
     const [loading, setLoading] = useState(false)
     const [completed, setCompleted] = useState(false)
     const [finalData, setFinalData] = useState(null)
@@ -76,6 +77,10 @@ export default function Phase6({ team, setTeam }) {
             setError('Please enter the location you found')
             return
         }
+        if (!driveLink.trim()) {
+            setError('Please paste your Google Drive photo link')
+            return
+        }
 
         setLoading(true)
         setError('')
@@ -86,7 +91,8 @@ export default function Phase6({ team, setTeam }) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     teamId: team.teamId,
-                    locationAnswer: location
+                    locationAnswer: location,
+                    driveLink: driveLink
                 })
             })
             const data = await res.json()
@@ -231,49 +237,20 @@ export default function Phase6({ team, setTeam }) {
                     </div>
                 )}
 
-                {team.phase1?.driveLink ? (
-                    <div style={{
-                        padding: '20px',
-                        background: 'rgba(66, 133, 244, 0.1)',
-                        border: '1px dashed #4285F4',
-                        borderRadius: '12px',
-                        marginBottom: '20px',
-                        textAlign: 'center'
-                    }}>
-                        <div style={{ fontSize: '2rem', marginBottom: '10px' }}>📂</div>
-                        <h4 style={{ color: '#8ab4f8', marginBottom: '10px' }}>
-                            Upload to Drive Folder
-                        </h4>
-                        <p style={{ fontSize: '1rem', marginBottom: '15px', color: '#e0e0e0', lineHeight: '1.5' }}>
-                            Upload your team photo at the location directly to your Google Drive folder.
-                        </p>
-                        <a
-                            href={team.phase1.driveLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn"
-                            style={{
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: '8px',
-                                background: '#4285F4',
-                                color: 'white',
-                                border: 'none',
-                                textDecoration: 'none',
-                                padding: '10px 20px',
-                                borderRadius: '6px',
-                                fontSize: '0.9rem',
-                                cursor: 'pointer'
-                            }}
-                        >
-                            Open Drive Folder <span style={{ fontSize: '1.2em' }}>↗</span>
-                        </a>
-                    </div>
-                ) : (
-                    <div style={{ padding: '20px', textAlign: 'center', color: '#aaa', border: '1px dashed #666', borderRadius: '8px', marginBottom: '20px' }}>
-                        <p>Drive link not found.</p>
-                    </div>
-                )}
+                {/* Drive Link for Photo Upload */}
+                <div className="form-group" style={{ marginBottom: '20px' }}>
+                    <label className="form-label">Google Drive Photo Link</label>
+                    <p style={{ color: '#b3b3b3', fontSize: '0.9rem', marginBottom: '10px' }}>
+                        Upload your team photo to Google Drive and paste the sharing link below.
+                    </p>
+                    <input
+                        type="url"
+                        className="form-input"
+                        placeholder="Paste your Google Drive photo link here..."
+                        value={driveLink}
+                        onChange={(e) => setDriveLink(e.target.value)}
+                    />
+                </div>
             </div>
 
             {/* Location Input */}

@@ -2,14 +2,20 @@ import { useState, useEffect } from 'react'
 import { Brain, Check, X, AlertCircle, Sparkles, RotateCcw } from 'lucide-react'
 import { API_URL } from '../App'
 
-const hintPoem = `I am the mind behind your mission,
-Not a person, yet I lead.
-I stand tall, I wear the organizing team's mark,
-Where ideas meet their seed.
-Find me where the second rise begins,
-On the floor that touches ground.
-Capture proof that you were here —
-And your victory is found.`
+function HintPoem() {
+    return (
+        <p style={{ lineHeight: '1.8', fontSize: '1.05rem', color: '#e2e8f0', fontStyle: 'italic', margin: 0 }}>
+            I am the mind behind your mission,<br />
+            Not a person, yet I lead.<br />
+            I <u>stand tall</u>, I wear the <u>organizing team's mark</u>,<br />
+            Where ideas meet their seed.<br />
+            Find me where the <u>second rise</u> begins,<br />
+            On the <u>floor that touches ground</u>.<br />
+            Capture proof that you were here —<br />
+            And your victory is found.
+        </p>
+    )
+}
 
 export default function Phase5({ team, setTeam }) {
     const [riddles, setRiddles] = useState([])
@@ -87,9 +93,7 @@ export default function Phase5({ team, setTeam }) {
                     <p style={{ color: '#a78bfa', fontFamily: 'Orbitron', fontSize: '0.85rem', marginBottom: '15px', textAlign: 'center' }}>
                         FINAL CLUE
                     </p>
-                    <p style={{ whiteSpace: 'pre-line', lineHeight: '1.8', fontSize: '1.05rem', color: '#e2e8f0', fontStyle: 'italic', margin: 0 }}>
-                        {hintPoem}
-                    </p>
+                    <HintPoem />
                 </div>
                 <p style={{ color: '#FFD700', fontSize: '1.1rem' }}>Scan the next QR code to continue.</p>
             </div>
@@ -156,9 +160,7 @@ export default function Phase5({ team, setTeam }) {
                     <p style={{ color: '#a78bfa', fontFamily: 'Orbitron', fontSize: '0.85rem', marginBottom: '15px', textAlign: 'center' }}>
                         FINAL CLUE
                     </p>
-                    <p style={{ whiteSpace: 'pre-line', lineHeight: '1.8', fontSize: '1.05rem', color: '#e2e8f0', fontStyle: 'italic', margin: 0 }}>
-                        {hintPoem}
-                    </p>
+                    <HintPoem />
                 </div>
             </div>
         )
