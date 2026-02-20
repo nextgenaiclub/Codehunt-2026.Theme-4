@@ -1070,7 +1070,7 @@ if (fs.existsSync(frontendPath)) {
 }
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`\n🚀 CodeHunt-2026 Server running on port ${PORT}`);
     console.log(`📦 Database: ${useFirebase ? 'Firebase Firestore ✓' : 'In-Memory (add firebase-credentials.json for Firebase)'}`);
     if (!useFirebase) {
