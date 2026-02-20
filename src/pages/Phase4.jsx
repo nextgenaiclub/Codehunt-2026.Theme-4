@@ -64,16 +64,16 @@ export default function Phase4({ team, setTeam }) {
                         🧩 RIDDLE - Find Your Next Location
                     </p>
                     <p style={{ color: '#e2e8f0', fontStyle: 'italic', lineHeight: '1.8', marginBottom: '15px', fontSize: '1.1rem' }}>
-                        Where campus paths cross, both science minds unite,<br/>
-                        Engineers and pharma learn from morning till night.<br/>
-                        On the ground where green leaves quietly chant,<br/>
-                        Look down below, resting under a plant.
+                        One ball, one hoop, one place to score,<br/>
+                        Echoes of bounce on the open floor.<br/>
+                        No nets of books, just aim and run,<br/>
+                        Find the code where the matches are won.
                     </p>
                     <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                        <strong>Hinglish:</strong> Campus ke center mein jahan sabka flow hai,<br/>
-                        Engineer aur pharma ka common show hai.<br/>
-                        Neeche zameen par hariyali ka hint,<br/>
-                        Ped ke neeche chhupa hai agla print.
+                        <strong>Hinglish:</strong> Ek ball, ek hoop, ek hi court,<br/>
+                        Bounce ki awaaz ka hota hai report.<br/>
+                        Books nahi, bas focus aur shot,<br/>
+                        Game wali jagah pe milega next plot.
                     </p>
                 </div>
                 <br />
@@ -101,16 +101,16 @@ export default function Phase4({ team, setTeam }) {
                         🧩 RIDDLE - Find Your Next Location
                     </p>
                     <p style={{ color: '#e2e8f0', fontStyle: 'italic', lineHeight: '1.8', marginBottom: '15px' }}>
-                        Where campus paths cross, both science minds unite,<br/>
-                        Engineers and pharma learn from morning till night.<br/>
-                        On the ground where green leaves quietly chant,<br/>
-                        Look down below, resting under a plant.
+                        One ball, one hoop, one place to score,<br/>
+                        Echoes of bounce on the open floor.<br/>
+                        No nets of books, just aim and run,<br/>
+                        Find the code where the matches are won.
                     </p>
                     <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                        <strong>Hinglish:</strong> Campus ke center mein jahan sabka flow hai,<br/>
-                        Engineer aur pharma ka common show hai.<br/>
-                        Neeche zameen par hariyali ka hint,<br/>
-                        Ped ke neeche chhupa hai agla print.
+                        <strong>Hinglish:</strong> Ek ball, ek hoop, ek hi court,<br/>
+                        Bounce ki awaaz ka hota hai report.<br/>
+                        Books nahi, bas focus aur shot,<br/>
+                        Game wali jagah pe milega next plot.
                     </p>
                 </div>
             </div>

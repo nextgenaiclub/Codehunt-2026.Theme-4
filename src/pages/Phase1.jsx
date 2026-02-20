@@ -46,16 +46,16 @@ export default function Phase1({ team, setTeam }) {
                         🧩 RIDDLE - Find Your Next Location
                     </p>
                     <p style={{ color: '#e2e8f0', fontStyle: 'italic', lineHeight: '1.8', marginBottom: '15px' }}>
-                        When hunger hits and crowds collide,<br/>
-                        The biggest food stop stands with pride.<br/>
-                        Near the number four, always alive,<br/>
-                        Plates and plans here truly thrive.
+                        Where rules are read and justice taught,<br/>
+                        The number seven matters more than you thought.<br/>
+                        Safety stands silent, red and bright,<br/>
+                        Check just behind to find your next light.
                     </p>
                     <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                        <strong>Hinglish:</strong> Jab bhookh lage aur crowd ho tight,<br/>
-                        Sabse badi canteen stays in sight.<br/>
-                        Four ke paas jo hamesha alive,<br/>
-                        Khana aur clues dono yahin survive.
+                        <strong>Hinglish:</strong> Kanoon ki baatein, rules ka scene,<br/>
+                        Seven ka number makes it clean.<br/>
+                        Red safety guard jo corner mein khada,<br/>
+                        Uske peeche hi raaz hai pada.
                     </p>
                 </div>
             </div>
@@ -142,16 +142,16 @@ export default function Phase1({ team, setTeam }) {
                         🧩 RIDDLE - Find Your Next Location
                     </p>
                     <p style={{ color: '#e2e8f0', fontStyle: 'italic', lineHeight: '1.8', marginBottom: '15px' }}>
-                        When hunger hits and crowds collide,<br/>
-                        The biggest food stop stands with pride.<br/>
-                        Near the number four, always alive,<br/>
-                        Plates and plans here truly thrive.
+                        Where rules are read and justice taught,<br/>
+                        The number seven matters more than you thought.<br/>
+                        Safety stands silent, red and bright,<br/>
+                        Check just behind to find your next light.
                     </p>
                     <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                        <strong>Hinglish:</strong> Jab bhookh lage aur crowd ho tight,<br/>
-                        Sabse badi canteen stays in sight.<br/>
-                        Four ke paas jo hamesha alive,<br/>
-                        Khana aur clues dono yahin survive.
+                        <strong>Hinglish:</strong> Kanoon ki baatein, rules ka scene,<br/>
+                        Seven ka number makes it clean.<br/>
+                        Red safety guard jo corner mein khada,<br/>
+                        Uske peeche hi raaz hai pada.
                     </p>
                 </div>
                 <br />

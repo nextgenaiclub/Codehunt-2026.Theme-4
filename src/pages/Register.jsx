@@ -48,16 +48,16 @@ export default function Register({ team, setTeam }) {
                         🧩 RIDDLE - Find Your Next Location
                     </p>
                     <p style={{ color: '#e2e8f0', fontStyle: 'italic', lineHeight: '1.8', marginBottom: '15px' }}>
-                        Walk past the slope, take a steady climb,<br/>
-                        Where green ideas met management in time.<br/>
-                        A wall that shows the campus name,<br/>
-                        Look near the symbol of college fame.
+                        When hunger hits and crowds collide,<br/>
+                        The biggest food stop stands with pride.<br/>
+                        Near the number four, always alive,<br/>
+                        Plates and plans here truly thrive.
                     </p>
                     <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                        <strong>Hinglish:</strong> Slope cross karke thoda aage jao,<br/>
-                        Management aur eco ka combo pao.<br/>
-                        Deewar pe jahan college ka sign,<br/>
-                        Logo ke paas milega tumhara next line.
+                        <strong>Hinglish:</strong> Jab bhookh lage aur crowd ho tight,<br/>
+                        Sabse badi canteen stays in sight.<br/>
+                        Four ke paas jo hamesha alive,<br/>
+                        Khana aur clues dono yahin survive.
                     </p>
                 </div>
                 <br />

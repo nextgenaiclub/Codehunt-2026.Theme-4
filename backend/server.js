@@ -270,63 +270,63 @@ async function getStats() {
 const phase2Questions = [
     {
         id: 1,
-        question: "Which algorithm technique solves problems by breaking them into subproblems?",
-        options: ["Divide and Conquer", "Random Search", "Greedy Avoidance", "Brute Force"],
-        correctAnswer: 0
+        question: "Intelligent tutoring systems mainly provide:",
+        options: ["Fixed lessons", "Only video lectures", "Personalized instruction", "Manual grading"],
+        correctAnswer: 2
     },
     {
         id: 2,
-        question: "Which data structure uses FIFO?",
-        options: ["Heap", "Queue", "Graph", "Stack"],
-        correctAnswer: 1
+        question: "AI grading tools help teachers by:",
+        options: ["Automating assessment", "Removing exams", "Increasing workload", "Preventing feedback"],
+        correctAnswer: 0
     },
     {
         id: 3,
-        question: "What does CPU stand for?",
-        options: ["Control Program Utility", "Computer Personal Unit", "Central Processing Unit", "Central Process Unit"],
+        question: "Which technology enables real-time lecture transcription?",
+        options: ["Computer Vision", "Blockchain", "Speech Recognition", "Data Mining"],
         correctAnswer: 2
     },
     {
         id: 4,
-        question: "Which sorting algorithm has average complexity O(n log n)?",
-        options: ["Selection Sort", "Bubble Sort", "Insertion Sort", "Merge Sort"],
+        question: "Adaptive learning platforms adjust based on:",
+        options: ["Teacher salary", "School building size", "Internet speed", "Student performance"],
         correctAnswer: 3
     },
     {
         id: 5,
-        question: "What is the binary representation of decimal 10?",
-        options: ["1110", "1010", "1001", "1100"],
+        question: "AI can identify struggling students through:",
+        options: ["Random selection", "Learning analytics", "Manual counting", "Attendance guessing"],
         correctAnswer: 1
     },
     {
         id: 6,
-        question: "Which layer of the OSI model handles routing?",
-        options: ["Network", "Transport", "Session", "Presentation"],
-        correctAnswer: 0
+        question: "Chatbots in education are useful for:",
+        options: ["Cancelling homework", "Closing libraries", "Answering student queries 24/7", "Replacing textbooks completely"],
+        correctAnswer: 2
     },
     {
         id: 7,
-        question: "A primary key must be:",
-        options: ["Repeated", "Optional", "Encrypted", "Unique"],
+        question: "Which is a risk of AI in education?",
+        options: ["Faster feedback", "Personalized study", "Better accessibility", "Algorithmic bias"],
         correctAnswer: 3
     },
     {
         id: 8,
-        question: "Which language is primarily used for web page structure?",
-        options: ["Python", "C++", "HTML", "Java"],
-        correctAnswer: 2
+        question: "AI translation tools help students by:",
+        options: ["Removing teachers", "Limiting resources", "Blocking communication", "Breaking language barriers"],
+        correctAnswer: 3
     },
     {
         id: 9,
-        question: "What is recursion?",
-        options: ["Memory deletion", "Parallel computing", "Loop unrolling", "Function calling itself"],
+        question: "Automated scheduling systems optimize:",
+        options: ["Playground size", "Classroom paint", "Uniform design", "Timetable creation"],
         correctAnswer: 3
     },
     {
         id: 10,
-        question: "Which memory is volatile?",
-        options: ["Hard Disk", "RAM", "SSD", "ROM"],
-        correctAnswer: 1
+        question: "Gamified AI learning platforms improve:",
+        options: ["Student boredom", "Network latency", "Engagement and motivation", "Paper usage"],
+        correctAnswer: 2
     }
 ];
 
@@ -334,37 +334,37 @@ const phase2Questions = [
 const phase3Questions = [
     {
         id: 1,
-        code: `#include <stdio.h>\nint main() {\n    int i, sum = 0;\n    for (i = 1; i <= 5; i++) {\n        if (i % 2 == 0)\n            continue;\n        sum += i;\n    }\n    printf("%d", sum);\n    return 0;\n}`,
+        code: `#include <stdio.h>\nint main() {\n    int x = 5, y = 2;\n    int result = x++ * --y;\n    printf("%d %d %d", result, x, y);\n    return 0;\n}`,
         question: "What will be the output of this code?",
-        options: ["6", "9", "15", "10"],
-        correctAnswer: 1
+        options: ["5 6 1", "10 6 1", "5 5 2", "10 5 1"],
+        correctAnswer: 0
     },
     {
         id: 2,
-        code: `#include <stdio.h>\nint main() {\n    int a = 5, b = 10;\n    int *p = &a, *q = &b;\n    *p = *q;\n    *q = a;\n    printf("%d %d", a, b);\n    return 0;\n}`,
+        code: `#include <stdio.h>\nint main() {\n    int i = 0, count = 0;\n    while (i < 10) {\n        i += 3;\n        if (i == 9)\n            break;\n        count++;\n    }\n    printf("%d %d", count, i);\n    return 0;\n}`,
         question: "What will be the output of this code?",
-        options: ["5 10", "10 5", "10 10", "5 5"],
-        correctAnswer: 2
-    },
-    {
-        id: 3,
-        code: `#include <stdio.h>\nint fun(int n) {\n    if (n == 0)\n        return 0;\n    return n % 10 + fun(n / 10);\n}\nint main() {\n    printf("%d", fun(1234));\n    return 0;\n}`,
-        question: "What will be the output of this code?",
-        options: ["1234", "4321", "10", "24"],
-        correctAnswer: 2
-    },
-    {
-        id: 4,
-        code: `#include <stdio.h>\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    int *ptr = arr;\n    printf("%d ", *(ptr + 2));\n    ptr++;\n    printf("%d ", *(ptr + 2));\n    return 0;\n}`,
-        question: "What will be the output of this code?",
-        options: ["2 4", "3 5", "3 4", "1 3"],
+        options: ["3 9", "2 9", "3 12", "2 6"],
         correctAnswer: 1
     },
     {
-        id: 5,
-        code: `#include <stdio.h>\nint main() {\n    int x = 1;\n    switch (x) {\n        case 1: printf("A");\n        case 2: printf("B");\n        case 3: printf("C");\n                break;\n        default: printf("D");\n    }\n    return 0;\n}`,
+        id: 3,
+        code: `#include <stdio.h>\nint main() {\n    int a = 12, b = 5;\n    printf("%d %d %d", a & b, a | b, a ^ b);\n    return 0;\n}`,
         question: "What will be the output of this code?",
-        options: ["A", "AB", "ABC", "ABCD"],
+        options: ["4 13 9", "5 12 7", "4 12 9", "0 17 8"],
+        correctAnswer: 0
+    },
+    {
+        id: 4,
+        code: `#include <stdio.h>\nint main() {\n    int arr[2][3] = {{1, 2, 3}, {4, 5, 6}};\n    printf("%d ", arr[0][2] + arr[1][0]);\n    printf("%d", arr[1][2] - arr[0][1]);\n    return 0;\n}`,
+        question: "What will be the output of this code?",
+        options: ["7 4", "5 3", "8 4", "6 5"],
+        correctAnswer: 0
+    },
+    {
+        id: 5,
+        code: `#include <stdio.h>\nint main() {\n    int a = 3, b = 7, c = 5;\n    int max = (a > b) ? a : (b > c) ? b : c;\n    int min = (a < b) ? (a < c) ? a : c : (b < c) ? b : c;\n    printf("%d %d", max, min);\n    return 0;\n}`,
+        question: "What will be the output of this code?",
+        options: ["3 7", "5 3", "7 3", "7 5"],
         correctAnswer: 2
     }
 ];
@@ -373,25 +373,25 @@ const phase3Questions = [
 const phase4Code = `#include <stdio.h>
 
 int main() {
-    int arr[5] = {10, 20, 30, 40, 50};
-    int *ptr = arr;
-    int sum = 0, i;
+    int arr[6] = {4, -2, 7, -1, 8, 3};
+    int i, sum = 0, count = 0;
 
-    for (i = 0; i < 5; i++) {
-        if (i % 2 = 0) {
-            sum += *(ptr + i)
+    for (i = 0; i <= 6; i++) {
+        if (arr[i] > 0) {
+            sum += arr[i]
+            count++;
         }
     }
 
-    print("Sum of even-indexed: %d", sum);
-    retrun 0;
+    prinf("Positive sum: %d, Count: %d", sum, count);
+    return 0;
 }`;
 
 const phase4Hints = [
-    "Look carefully at the if condition - is '=' used for comparison?",
-    "Check for missing semicolons inside the loop body",
-    "Are 'print' and 'retrun' valid C keywords?",
-    "Even-indexed elements are arr[0], arr[2], arr[4] = 10, 30, 50"
+    "Check the loop condition carefully — the array has 6 elements, so valid indices are 0 to 5",
+    "Look for a missing semicolon on the sum += arr[i] line",
+    "Is 'prinf' a valid C function? Check the spelling",
+    "Positive numbers in the array: 4, 7, 8, 3 → Sum = 22, Count = 4"
 ];
 
 // Phase 5 Riddles - 3 Challenges (ALL required to pass)
@@ -399,32 +399,32 @@ const phase5Riddles = [
     {
         id: 1,
         type: "mcq",
-        riddle: "Study the maze below and find the ONLY path from S (Start) to E (Exit). Walls (#) block movement. You can only move Right (→) or Down (↓).\n\n    C0  C1  C2  C3  C4  C5\nR0: [S] [.] [#] [.] [.] [.]\nR1: [#] [.] [.] [.] [#] [.]\nR2: [#] [#] [#] [.] [.] [.]\nR3: [.] [.] [#] [#] [#] [.]\nR4: [#] [.] [.] [.] [#] [.]\nR5: [#] [#] [#] [.] [.] [E]\n\nWhich sequence of moves leads from S to E?",
+        riddle: "Study the maze below and find the ONLY path from S (Start) to E (Exit). Walls (#) block movement. You can only move Right (→) or Down (↓).\n\n    C0  C1  C2  C3  C4  C5\nR0: [S] [.] [#] [.] [.] [.]\nR1: [#] [.] [.] [#] [.] [#]\nR2: [.] [#] [.] [.] [.] [.]\nR3: [.] [.] [#] [#] [#] [.]\nR4: [#] [.] [.] [.] [#] [.]\nR5: [.] [#] [.] [.] [.] [E]\n\nWhich sequence of moves leads from S to E?",
         options: [
-            "→ ↓ → → ↓ ↓ → → ↓ ↓",
             "→ ↓ → → ↓ → → ↓ ↓ ↓",
-            "→ ↓ → ↓ → → ↓ ↓ → ↓",
-            "→ ↓ → → ↓ → ↓ → ↓ ↓"
+            "→ ↓ ↓ → → → ↓ → ↓ ↓",
+            "→ ↓ → ↓ → → → ↓ ↓ ↓",
+            "↓ → → ↓ → → → ↓ ↓ ↓"
         ],
-        correctAnswer: 1
+        correctAnswer: 2
     },
     {
         id: 2,
         type: "mcq",
-        riddle: "LOGICAL DEDUCTION: Each CS Module is assigned exactly one function.\n\nCS Modules:\n  1. AlgoCore\n  2. DataNest\n  3. LogicFlow\n  4. ByteWorks\n\nFunctions:\n  A. Algorithms\n  B. Data Structures\n  C. Memory Management\n  D. Control Flow\n\nClues:\n  • DataNest (2) is assigned to Control Flow (D)\n  • AlgoCore (1) is assigned to Data Structures (B)\n  • ByteWorks (4) is NOT assigned to B or D\n  • LogicFlow (3) is assigned to Algorithms (A)\n\nWhat is the correct mapping?",
+        riddle: "LOGICAL DEDUCTION: Each AI Learning Tool is assigned exactly one Educational Function.\n\nAI Learning Tools (Numbered):\n  1. LearnMate\n  2. QuizGen\n  3. SmartTutor\n  4. SkillTrack\n\nEducational Functions (Labeled):\n  A. Personalized Learning\n  B. Assessment & Quizzes\n  C. Progress Tracking\n  D. Doubt Resolution\n\nClues:\n  • QuizGen (2) is assigned to Assessment & Quizzes (B)\n  • LearnMate (1) is assigned to Personalized Learning (A)\n  • SkillTrack (4) is NOT assigned to A or B\n  • SmartTutor (3) is assigned to Doubt Resolution (D)\n\nWhat is the correct mapping?",
         options: [
-            "AlgoCore→A, DataNest→D, LogicFlow→B, ByteWorks→C",
-            "AlgoCore→B, DataNest→D, LogicFlow→A, ByteWorks→C",
-            "AlgoCore→B, DataNest→C, LogicFlow→A, ByteWorks→D",
-            "AlgoCore→C, DataNest→D, LogicFlow→A, ByteWorks→B"
+            "LearnMate→A, QuizGen→B, SmartTutor→C, SkillTrack→D",
+            "LearnMate→B, QuizGen→A, SmartTutor→D, SkillTrack→C",
+            "LearnMate→A, QuizGen→B, SmartTutor→D, SkillTrack→C",
+            "LearnMate→D, QuizGen→B, SmartTutor→A, SkillTrack→C"
         ],
-        correctAnswer: 1
+        correctAnswer: 2
     },
     {
         id: 3,
         type: "text",
-        riddle: "PATTERN RECOGNITION\n\nStep 1 — Given Values:\n  A = 5,  B = 4,  C = 3,  D = 6\n\nStep 2 — Solve these expressions in order:\n  1) (3 × D) + 1\n  2) (4 × A)\n  3) (B − 3)\n  4) (2 × A) + 4\n  5) (C + 1)\n  6) (1 × A)\n  7) (1 × A)\n\nStep 3 — Convert each result to a letter using A1–Z26\n  (A=1, B=2, C=3 ... Z=26)\n\nWhat is the decoded keyword?",
-        acceptedAnswers: ["standee", "STANDEE", "Standee"]
+        riddle: "PATTERN RECOGNITION\n\nStep 1 — Given Values:\n  A = 6,  B = 1,  C = 2,  D = 3\n\nStep 2 — Solve these expressions in order:\n  1) (2 × B)\n  2) (2 × A)\n  3) (2 × C)\n  4) (7 × B)\n  5) (2)\n\nStep 3 — Convert the obtained numbers using A1–Z26\n  (A=1, B=2, C=3 ... Z=26)\n  If a number is already a single digit, keep it as-is.\n\nWhat is the decoded keyword?",
+        acceptedAnswers: ["BLDG 2", "BLDG2", "bldg 2", "bldg2", "Bldg 2", "Bldg2"]
     }
 ];
 
@@ -788,9 +788,9 @@ app.post('/api/phase4/submit', async (req, res) => {
             return res.status(400).json({ error: 'Phase 4 already completed' });
         }
 
-        const correctAnswer = 'sum of even-indexed: 90';
+        const correctAnswer = 'positive sum: 22, count: 4';
         const userAnswer = answer ? answer.trim().toLowerCase() : '';
-        const isCorrect = userAnswer === correctAnswer || userAnswer === '90';
+        const isCorrect = userAnswer === correctAnswer || userAnswer === '22';
 
         if (isCorrect) {
             await saveTeam(teamId, {

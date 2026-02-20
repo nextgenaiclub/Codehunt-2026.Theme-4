@@ -4,16 +4,20 @@ import { API_URL } from '../App'
 
 function HintPoem() {
     return (
-        <p style={{ lineHeight: '1.8', fontSize: '1.05rem', color: '#e2e8f0', fontStyle: 'italic', margin: 0 }}>
-            I am the mind behind your mission,<br />
-            Not a person, yet I lead.<br />
-            I <u>stand tall</u>, I wear the <u>organizing team's mark</u>,<br />
-            Where ideas meet their seed.<br />
-            Find me where the <u>second rise</u> begins,<br />
-            On the <u>floor that touches ground</u>.<br />
-            Capture proof that you were here —<br />
-            And your victory is found.
-        </p>
+        <>
+            <p style={{ lineHeight: '1.8', fontSize: '1.05rem', color: '#e2e8f0', fontStyle: 'italic', margin: 0, marginBottom: '15px' }}>
+                Walk past the slope, take a steady climb,<br />
+                Where green ideas met management in time.<br />
+                A wall that shows the campus name,<br />
+                Look near the symbol of college fame.
+            </p>
+            <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.6', margin: 0 }}>
+                <strong>Hinglish:</strong> Slope cross karke thoda aage jao,<br />
+                Management aur eco ka combo pao.<br />
+                Deewar pe jahan college ka sign,<br />
+                Logo ke paas milega tumhara next line.
+            </p>
+        </>
     )
 }
 
