@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: codehunt-2026
+    runtime: node
+    buildCommand: npm run render-build
+    startCommand: node backend/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: FIREBASE_CREDENTIALS
+        sync: false   # You must set this manually in Render dashboard

@@ -411,7 +411,7 @@ const phase5Riddles = [
     {
         id: 2,
         type: "mcq",
-        riddle: "LOGICAL DEDUCTION: Each AI Learning Tool is assigned exactly one Educational Function.\n\nAI Learning Tools (Numbered):\n  1. LearnMate\n  2. QuizGen\n  3. SmartTutor\n  4. SkillTrack\n\nEducational Functions (Labeled):\n  A. Personalized Learning\n  B. Assessment & Quizzes\n  C. Progress Tracking\n  D. Doubt Resolution\n\nClues:\n  • QuizGen (2) is assigned to Assessment & Quizzes (B)\n  • LearnMate (1) is assigned to Personalized Learning (A)\n  • SkillTrack (4) is NOT assigned to A or B\n  • SmartTutor (3) is assigned to Doubt Resolution (D)\n\nWhat is the correct mapping?",
+        riddle: "LOGICAL DEDUCTION: Each AI Learning Tool is assigned exactly one Educational Function.\n\nAI Learning Tools (Numbered):\n  1. LearnMate\n  2. QuizGen\n  3. SmartTutor\n  4. SkillTrack\n\nEducational Functions (Labeled):\n  A. Personalized Learning\n  B. Assessment & Quizzes\n  C. Progress Tracking\n  D. Doubt Resolution\n\nWhat is the correct mapping?",
         options: [
             "LearnMate→A, QuizGen→B, SmartTutor→C, SkillTrack→D",
             "LearnMate→B, QuizGen→A, SmartTutor→D, SkillTrack→C",

@@ -115,31 +115,16 @@ export default function Phase3({ team, setTeam }) {
                         🧩 RIDDLE - Find Your Next Location
                     </p>
                     <p style={{ color: '#e2e8f0', fontStyle: 'italic', lineHeight: '1.8', marginBottom: '10px' }}>
-                        <strong style={{ color: '#FFD700' }}>Lab 2101 (First Floor – CS Lab):</strong><br/>
-                        Climb one level, logic gets strong,<br/>
-                        Screens glow bright where coders belong.<br/>
-                        Syntax speaks, machines align,<br/>
-                        First floor hides the next design.
-                    </p>
-                    <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '15px' }}>
-                        <strong>Hinglish:</strong> Ek floor upar, logic on fire,<br/>
-                        Screens aur code ka perfect choir.<br/>
-                        CS ka adda, focus lab divine,<br/>
-                        First floor pe milega next sign.
-                    </p>
-                    <hr style={{ border: 'none', borderTop: '1px solid rgba(139, 92, 246, 0.3)', margin: '15px 0' }} />
-                    <p style={{ color: '#e2e8f0', fontStyle: 'italic', lineHeight: '1.8', marginBottom: '10px' }}>
-                        <strong style={{ color: '#FFD700' }}>Lab 2012 (Ground Floor – CS Lab):</strong><br/>
-                        From ground you start the digital race,<br/>
-                        Keyboards click in a focused space.<br/>
-                        Where systems run and minds compile,<br/>
-                        The lower lab hides the next file.
+                        Climb one level, logic gets strong,<br />
+                        Screens glow bright where coders belong.<br />
+                        Syntax speaks, machines align,<br />
+                        One floor above hides the next design.
                     </p>
                     <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                        <strong>Hinglish:</strong> Zameen se shuru hota coding ka track,<br/>
-                        Keyboard ki awaaz, full focus mode on pack.<br/>
-                        Neeche wale lab mein dimag align,<br/>
-                        Ground floor pe milega agla sign.
+                        <strong>Hinglish:</strong> Ek floor upar, logic on fire,<br />
+                        Screens aur code ka perfect choir.<br />
+                        Focus karo, machines ka divine,<br />
+                        Upar wale floor pe milega next sign.
                     </p>
                 </div>
             </div>
@@ -251,31 +236,16 @@ export default function Phase3({ team, setTeam }) {
                                     🧩 RIDDLE - Find Your Next Location
                                 </p>
                                 <p style={{ color: '#e2e8f0', fontStyle: 'italic', lineHeight: '1.8', marginBottom: '10px' }}>
-                                    <strong style={{ color: '#FFD700' }}>Lab 2101 (First Floor – CS Lab):</strong><br/>
-                                    Climb one level, logic gets strong,<br/>
-                                    Screens glow bright where coders belong.<br/>
-                                    Syntax speaks, machines align,<br/>
-                                    First floor hides the next design.
-                                </p>
-                                <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '15px' }}>
-                                    <strong>Hinglish:</strong> Ek floor upar, logic on fire,<br/>
-                                    Screens aur code ka perfect choir.<br/>
-                                    CS ka adda, focus lab divine,<br/>
-                                    First floor pe milega next sign.
-                                </p>
-                                <hr style={{ border: 'none', borderTop: '1px solid rgba(139, 92, 246, 0.3)', margin: '15px 0' }} />
-                                <p style={{ color: '#e2e8f0', fontStyle: 'italic', lineHeight: '1.8', marginBottom: '10px' }}>
-                                    <strong style={{ color: '#FFD700' }}>Lab 2012 (Ground Floor – CS Lab):</strong><br/>
-                                    From ground you start the digital race,<br/>
-                                    Keyboards click in a focused space.<br/>
-                                    Where systems run and minds compile,<br/>
-                                    The lower lab hides the next file.
+                                    Climb one level, logic gets strong,<br />
+                                    Screens glow bright where coders belong.<br />
+                                    Syntax speaks, machines align,<br />
+                                    One floor above hides the next design.
                                 </p>
                                 <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                                    <strong>Hinglish:</strong> Zameen se shuru hota coding ka track,<br/>
-                                    Keyboard ki awaaz, full focus mode on pack.<br/>
-                                    Neeche wale lab mein dimag align,<br/>
-                                    Ground floor pe milega agla sign.
+                                    <strong>Hinglish:</strong> Ek floor upar, logic on fire,<br />
+                                    Screens aur code ka perfect choir.<br />
+                                    Focus karo, machines ka divine,<br />
+                                    Upar wale floor pe milega next sign.
                                 </p>
                             </div>
                             <br />
