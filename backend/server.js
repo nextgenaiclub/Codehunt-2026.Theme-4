@@ -410,8 +410,14 @@ const phase5Riddles = [
     },
     {
         id: 2,
+        type: "text",
+        riddle: "PATTERN RECOGNITION\n\nStep 1 — Given Values:\n  A = 6,  B = 1,  C = 2,  D = 3\n\nStep 2 — Solve these expressions in order:\n  1) (2 × B)\n  2) (2 × A)\n  3) (2 × C)\n  4) (7 × B)\n  5) (2)\n\nStep 3 — Convert the obtained numbers using A1–Z26\n  (A=1, B=2, C=3 ... Z=26)\n  If a number is already a single digit, keep it as-is.\n\nWhat is the decoded keyword?",
+        acceptedAnswers: ["BLDG 2", "BLDG2", "bldg 2", "bldg2", "Bldg 2", "Bldg2"]
+    },
+    {
+        id: 3,
         type: "mcq",
-        riddle: "LOGICAL DEDUCTION: Each AI Learning Tool is assigned exactly one Educational Function.\n\nAI Learning Tools (Numbered):\n  1. LearnMate\n  2. QuizGen\n  3. SmartTutor\n  4. SkillTrack\n\nEducational Functions (Labeled):\n  A. Personalized Learning\n  B. Assessment & Quizzes\n  C. Progress Tracking\n  D. Doubt Resolution\n\nWhat is the correct mapping?",
+        riddle: "LOGICAL DEDUCTION: Each AI Learning Tool is assigned exactly one Educational Function.\n\nAI Learning Tools (Numbered):\n  1. LearnMate\n  2. QuizGen\n  3. SmartTutor\n  4. SkillTrack\n\nEducational Functions (Labeled):\n  A. Personalized Learning\n  B. Assessment & Quizzes\n  C. Progress Tracking\n  D. Doubt Resolution\n\nCLUES:\n- QuizGen (2) is assigned to Assessment & Quizzes (B)\n- LearnMate (1) is assigned to Personalized Learning (A)\n- SkillTrack (4) is not assigned to A or B\n- SmartTutor (3) is assigned to Doubt Resolution (D)\n\nWhat is the correct mapping?",
         options: [
             "LearnMate→A, QuizGen→B, SmartTutor→C, SkillTrack→D",
             "LearnMate→B, QuizGen→A, SmartTutor→D, SkillTrack→C",
@@ -419,12 +425,6 @@ const phase5Riddles = [
             "LearnMate→D, QuizGen→B, SmartTutor→A, SkillTrack→C"
         ],
         correctAnswer: 2
-    },
-    {
-        id: 3,
-        type: "text",
-        riddle: "PATTERN RECOGNITION\n\nStep 1 — Given Values:\n  A = 6,  B = 1,  C = 2,  D = 3\n\nStep 2 — Solve these expressions in order:\n  1) (2 × B)\n  2) (2 × A)\n  3) (2 × C)\n  4) (7 × B)\n  5) (2)\n\nStep 3 — Convert the obtained numbers using A1–Z26\n  (A=1, B=2, C=3 ... Z=26)\n  If a number is already a single digit, keep it as-is.\n\nWhat is the decoded keyword?",
-        acceptedAnswers: ["BLDG 2", "BLDG2", "bldg 2", "bldg2", "Bldg 2", "Bldg2"]
     }
 ];
 
